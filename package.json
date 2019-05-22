@@ -1,6 +1,6 @@
 {
   "name": "servie-url",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "URL parser for Servie with built-in caching",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
