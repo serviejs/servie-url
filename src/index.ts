@@ -1,8 +1,8 @@
-import { Request } from "servie";
+import { CommonRequest } from "servie/dist/common";
 import { URL } from "url";
 
 type URLCache = { url: string; URL: URL };
-const map = new WeakMap<Request, URLCache>();
+const map = new WeakMap<CommonRequest, URLCache>();
 
 /**
  * Parse pathname from request url.
@@ -14,7 +14,7 @@ function toURL(url: string) {
 /**
  * Parse pathname from request instance.
  */
-export function getURL(req: Request): URL {
+export function getURL(req: CommonRequest): URL {
   const { url } = req;
   const cache = map.get(req);
 
